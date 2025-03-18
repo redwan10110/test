@@ -1,0 +1,229 @@
+/* Fondo y estilos generales */
+body,
+html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, black, grey);
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal para páginas */
+.page-container {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  padding: 20px;
+  overflow: visible; /* Evita que el texto se recorte */
+}
+
+
+/* Títulos */
+.title {
+  font-size: 2rem; /* Ajusta el tamaño si es necesario */
+  text-align: center;
+  word-wrap: break-word; /* Rompe palabras largas si es necesario */
+  max-width: 100%; /* Asegura que no se desborde */
+}
+
+
+
+/* Contenido general */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Sección de texto */
+.text-section {
+  width: 60%;
+  text-align: left;
+}
+
+/* Sección de imagen */
+.image-section {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.hospital-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Formularios */
+form {
+  width: 100%;
+  height: auto;
+  min-width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Inputs */
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Botones */
+button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+  display: block;
+  margin: auto;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Lista de turnos en fila */
+.turnos-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+/* Turno en una fila horizontal */
+.turno-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 300px;
+  flex-shrink: 0;
+}
+
+/* Información del turno */
+.turno-info {
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* Turno cancelado */
+.turno-cancelado {
+  background-color: #ffcccc;
+  color: #900;
+  text-decoration: line-through;
+}
+
+/* Botón de cancelar */
+.btn-cancel {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-cancel:hover {
+  background-color: darkred;
+}
+
+/* Botón deshabilitado para turnos cancelados */
+.btn-cancel.disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* Botón para pedir turno */
+.btn-agendar {
+  padding: 10px 15px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.btn-agendar:hover {
+  background-color: darkgreen;
+}
+
+/* Asegurar que el formulario esté centrado correctamente */
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+/* Ajustar el formulario dentro de la caja */
+.form-container form {
+  width: 100%;
+}
+
+/* Asegurar que los inputs ocupen bien el espacio */
+.form-container input,
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Asegurar que el botón no quede desalineado */
+.form-container button {
+  width: 80%;
+}
+/* Reducir tamaño del texto sin eliminar estilos previos */
+.title, .description, .services-list, .doctor-list {
+  font-size: 90%; /* Reduce el tamaño del texto manteniendo la proporción */
+}
+
+/* Hacer que el contenido se ajuste mejor en pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .text-section {
+    width: 100%;
+  }
+
+  .hospital-image {
+    max-width: 200px;
+  }
+}
